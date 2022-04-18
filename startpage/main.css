@@ -1,0 +1,161 @@
+/* SETUP PAGE START */
+:root {
+  --background-color: #09070d;
+  --paper-color: #bf5040;
+  --text-primary: #e89494;
+  --text-secondary: #cfa06e;
+  --link-focused: #c54141;
+  --link-clicked: #e89494;
+  --rss-text-primary: #b9b9b;
+  --rss-text-secondary: #cfa06e;
+  --border-color: #4e555b;
+  --animation-speed: 0.6s;
+  --margin-up-bottom: 90%;
+  --card-margins: 5px;
+}
+
+@font-face {
+  font-family: "Hermit";
+  src: url("fonts/Hermit-Regular.woff2") format("woff2"),
+    url("fonts/Hermit-Light.woff2") format("woff"),
+    url("fonts/Hermit-Bold.woff2") format("woff");
+}
+
+@media only screen and (max-width: 1000px), (max-height: 400px) {
+  .rssBlock {
+    opacity: 0;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Hermit", Fallback, sans-serif;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+/* SETUP PAGE END */
+
+/* CENTER BLOCK START */
+.centerBlock {
+  height: var(--margin-up-bottom);
+  max-height: var(--margin-up-bottom);
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.centerBlock h2 {
+  color: var(--text-primary);
+  margin: 0 0 10px 0;
+}
+
+.centerBlock a {
+  color: var(--text-secondary);
+  font-weight: lighter;
+}
+.centerBlock a:hover {
+  color: var(--link-focused);
+  font-weight: lighter;
+}
+.centerBlock a:focus {
+  color: var(--link-clicked);
+  font-weight: lighter;
+}
+
+.favs {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.favBlock {
+  padding: 10px;
+
+  display: flex;
+  flex-flow: column wrap;
+
+  list-style-type: none;
+  text-align: center;
+}
+
+.centerImg {
+  width: auto;
+  max-width: 400px;
+  max-height: 400px;
+  height: auto;
+  min-width: 400px;
+  min-height: 400px;
+  object-fit: contain;
+}
+/* CENTER BLOCK END */
+
+/* RSS BLOCK START */
+.rssBlock {
+  padding: 10px;
+  margin: 0 20px;
+
+  width: 500px;
+  height: var(--margin-up-bottom);
+  overflow-y: scroll;
+
+  background-color: var(--paper-color);
+  transition: opacity var(--animation-speed);
+}
+
+.rssBlock::-webkit-scrollbar {
+  display: none;
+}
+
+.rss-list {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.rssBlock h1 {
+  font-weight: bolder;
+  color: var(--rss-text-primary);
+  text-align: center;
+}
+
+/* ARTICLE */
+.article {
+  display: flex;
+  flex-flow: row wrap;
+  margin: var(--card-margins);
+  padding: 10px;
+  background-color: var(--background-color);
+}
+
+.article a {
+  color: var(--rss-text-primary);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.article a:focus {
+  color: var(--link-focused);
+}
+
+.article a:hover {
+  color: var(--link-focused);
+}
+
+.article p {
+  color: var(--rss-text-secondary);
+  font-weight: normal;
+}

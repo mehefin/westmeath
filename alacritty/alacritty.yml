@@ -1,0 +1,56 @@
+### environment term variable
+env:
+  TERM: alacritty
+  LANG: "en_US.UTF-8"
+  LC_CTYPE: en_US.UTF-8
+### window set and gaps
+window:
+  dimensions:
+    columns: 50
+    lines: 10
+  padding:
+    x: 30
+    y: 30
+### scroll history
+scrolling:
+  history: 99
+### font family
+font:
+  normal:
+    family: Monofurbold Nerd Font
+    style: Regular
+  size: 18
+### gamma set
+colors:
+  primary:
+    background: "#09070d"
+    foreground: "#e89494"
+  cursor:
+    text: "#e89494"
+    cursor: "#e89494"
+  normal:
+    black: "#09070d"
+    red: "#c54141"
+    green: "#c23e45"
+    yellow: "#cfa06e"
+    blue: "#b77859"
+    magenta: "#ce776b"
+    cyan: "#e09854"
+    white: "#dcbd9f"
+  bright:
+    black: "#14101e"
+    red: "#ca5454"
+    green: "#c85157"
+    yellow: "#d3a97c"
+    blue: "#be8569"
+    magenta: "#d28479"
+    cyan: "#e09854"
+    white: "#dfc3a8"
+### background transparency
+window.opacity: 1.0
+### cursor style and blinking
+cursor:
+  style:
+    shape: Underline
+    blinking: always
+    blink_interval: 50

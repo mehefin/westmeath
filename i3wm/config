@@ -1,0 +1,58 @@
+### bindsyms, gaps and no titles
+bindsym Mod4+c floating toggle
+bindsym Mod4+i focus up
+bindsym Mod4+k focus left
+bindsym Mod4+r mode "resize"
+bindsym Mod4+Shift+i move up
+bindsym Mod4+Shift+k move down
+bindsym Mod4+Shift+q kill
+bindsym Mod4+Shift+r restart
+bindsym Mod4+Shift+l reload
+bindsym Mod4+v fullscreen toggle
+bindsym Mod4+Shift+w move container to workspace $ws1
+bindsym Mod4+Shift+a move container to workspace $ws2
+bindsym Mod4+Shift+s move container to workspace $ws3
+bindsym Mod4+Shift+d move container to workspace $ws4
+bindsym Mod4+w workspace $ws1
+bindsym Mod4+a workspace $ws2
+bindsym Mod4+s workspace $ws3
+bindsym Mod4+d workspace $ws4
+bindsym Mod4+q workspace prev
+bindsym Mod4+e workspace next
+bindsym Mod4+l exec dmenu_run
+bindsym Mod4+grave exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym Mod4+Tab exec pactl set-sink-volume @DEFAULT_SINK@ -10%
+floating_modifier Mod4
+focus_follows_mouse no
+focus_on_window_activation focus
+font pango: Monofurbold Nerd Font 16
+for_window [class="^.*"] border pixel 0
+for_window [class=".*"] split toggle
+gaps inner 5
+gaps outer 10
+mouse_warping none
+### workspace names
+set $ws1 "arragh"
+set $ws2 "sourey"
+set $ws3 "fouyr"
+set $ws4 "gheurey"
+### autloading apps
+exec --no-startup-id feh --bg-fill /home/username/your_picture.jpg
+exec --no-startup-id picom --config /home/username/your_picom.conf
+### status bar
+bar {
+	font pango: Monofurbold Nerd Font 12
+	position bottom
+	status_command i3status-rs /home/username/your_config.toml
+	tray_output none
+	workspace_buttons yes
+	colors {
+		background #09070d
+		statusline #e89494
+		separator #09070d
+		focused_workspace  #09070d #e89494 #09070d
+		active_workspace #09070d #14101e #cfa06e
+		inactive_workspace #09070d #14101e #cfa06e
+		urgent_workspace #09070d #09070d #c23e45
+	}
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <title>home</title>
+  <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-rss/3.3.0/jquery.rss.min.js"></script>
+  <script>
+    jQuery(function ($) {
+      $("#rss-new").rss(["https://www.technologyreview.com/feed/"], {
+        limit: 15,
+        support: true,
+        layoutTemplate: "<div class='rss-list'>{entries}</div>",
+        order: "publishedDate",
+        entryTemplate:
+          '<div class="article"><a href="{url}">[{author}] {title}</a><p>{shortBodyPlain}...</p></div>',
+      });
+    });
+  </script>
+  <script>
+    jQuery(function ($) {
+      $("#rss-movie").rss(["https://www.ihorror.com/feed/"], {
+        limit: 15,
+        support: true,
+        layoutTemplate: "<div class='rss-list'>{entries}</div>",
+        order: "publishedDate",
+        entryTemplate:
+          '<div class="article"><a href="{url}">[{author}] {title}</a><p>{shortBodyPlain}...</p></div>',
+      });
+    });
+  </script>
+</header>
+  <div class="wrapper">
+    <div class="rssBlock">
+      <h1>#New</h1>
+      <div id="rss-new"></div>
+    </div>
+    <div class="centerBlock">
+      <div class="favs">
+        <ul class="favBlock">
+          <h2 class="favTitle">soc</h2>
+          <li><a href="https://www.youtube.com/feed/subscriptions"> tube </a></li>
+          <li><a href="https://www.reddit.com/"> redd </a></li>
+          <li><a href="https://github.com/topics"> git </a></li>
+        </ul>
+        <ul class="favBlock">
+          <h2 class="favTitle">lea</h2>
+          <li><a href="https://www.duolingo.com/learn"> duo </a></li>
+          <li><a href="https://context.reverso.net/translation/"> rvs </a></li>
+          <li><a href="https://youglish.com/"> ygh </a></li>
+        </ul>
+        <ul class="favBlock">
+          <h2 class="favTitle">tec</h2>
+          <li><a href="https://z-lib.org/"> zlib </a></li>
+          <li><a href="https://www.dnsleaktest.com/"> dns </a></li>
+          <li><a href="https://unsplash.com/"> uns </a></li>
+          <li><a href="https://www.color-hex.com/color-palettes/"> hex </a></li>
+          <li><a href="https://greasyfork.org/en"> fork </a></li>
+        </ul>
+        <ul class="favBlock">
+          <h2 class="favTitle">gms</h2>
+          <li><a href="https://itch.io/"> itch </a></li>
+          <li><a href="https://gamesnostalgia.com/games"> nst </a></li>
+          <li><a href="https://www.myabandonware.com/"> maw </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rssBlock">
+      <h1>#Mov</h1>
+      <div id="rss-movie"></div>
+    </div>
+  </div>
+</body>

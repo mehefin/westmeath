@@ -1,0 +1,6 @@
+To get i3status theme work, you have to put mehefin.toml in /usr/share/i3status-rust/themes after installing i3status-rust package. Again, I use 
+a fork of dmenu: clean dmenu, so be careful with the dmenu config file and better install the fork - https://github.com/migueravila/CleanDmenu. 
+By the way, you need to put startpage directory in /home/username/.config/qutebrowser/ and rewrite these two lines in your browser settings:
+:set url.start_pages file:///home/username/.config/qutebrowser/startpage/index.html
+:set url.default_page file:///home/username/.config/qutebrowser/startpage/index.html
+Now everything should work properly.

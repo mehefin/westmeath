@@ -1,0 +1,47 @@
+map i scroll up
+map j navigate previous
+map k scroll down
+map l navigate next
+map zx quit
+set abort-clear-search true
+set adjust-open width
+set completion-bg 				"#09070d" # background
+set completion-fg 				"#e89494" # comment
+set completion-group-bg 		"#09070d" # background
+set completion-group-fg 		"#e89494" # comment
+set completion-highlight-bg 	"#e89494" # selection
+set completion-highlight-fg 	"#e89494" # foreground
+set continuous-hist-save true
+set default-bg 					"#09070d" # background
+set default-fg 					"#e89494" # foreground
+set font "Hermit 13"
+set guioptions s
+set highlight-active-color 		"#c54141" # pink
+set highlight-color 			"#cfa06e" # orange
+set incremental-search true
+set index-active-bg 			"#09070d" # current line
+set index-active-fg 			"#e89494" # foreground
+set index-bg 					"#09070d" # background
+set index-fg 					"#e89494" # foreground
+set inputbar-bg 				"#09070d" # background
+set inputbar-fg 				"#e89494" # foreground
+set notification-bg 			"#09070d" # background
+set notification-error-bg 		"#c54141" # red
+set notification-error-fg 		"#e89494" # foreground
+set notification-fg 			"#e89494" # foreground
+set notification-warning-bg 	"#b77859" # orange
+set notification-warning-fg 	"#e89494" # selection
+set page-padding 1
+set recolor-darkcolor 			"#e89494" # foreground
+set recolor-keephue true
+set recolor-lightcolor 			"#09070d" # background
+set recolor true
+set render-loading-bg 			"#e89494" # foreground
+set render-loading-fg 			"#09070d" # background
+set render-loading true
+set sandbox none
+set selection-clipboard "clipboard"
+set statusbar-basename true
+set statusbar-bg 				"#09070d" # background
+set statusbar-fg 				"#e89494" # foreground
+set window-title-basename true
