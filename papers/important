@@ -3,4 +3,6 @@ a fork of dmenu: clean dmenu, so be careful with the dmenu config file and bette
 By the way, you need to put startpage directory in /home/username/.config/qutebrowser/ and rewrite these two lines in your browser settings:
 :set url.start_pages file:///home/username/.config/qutebrowser/startpage/index.html
 :set url.default_page file:///home/username/.config/qutebrowser/startpage/index.html
+As for greasemonkey, you need to move it in qutebrowser directory, then open the settings and type:
+greasemonkey-reload
 Now everything should work properly.
